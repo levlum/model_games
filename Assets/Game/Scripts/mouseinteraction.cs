@@ -13,7 +13,7 @@ public class mouseinteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bool huhu = true;
+        //bool huhu = true;
     }
 
     // Update is called once per frame
@@ -24,14 +24,20 @@ public class mouseinteraction : MonoBehaviour
         var ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit) && hit.rigidbody != null) {
-            if (alive) hit.rigidbody.AddForce(new Vector3(0, 2, 0), ForceMode.Impulse);
-            if (Input.GetMouseButtonDown(0)){
-                alive = !alive;
-                
+            if (hit.rigidbody.GetComponent<drag>() == null){
 
-                foreach (Transform cube in all_cubes){
-                    cube.GetComponent<SpringJoint>().spring = alive ? 10 : 0;
-                    cube.GetComponent<Renderer>().material.color = alive ? livingColor : deadColor;
+                if (alive) hit.rigidbody.AddForce(new Vector3(0, 2, 0), ForceMode.Impulse);
+                if (Input.GetMouseButtonDown(0)){
+                    /*
+                    alive = !alive;
+                    
+
+                    foreach (Transform cube in all_cubes){
+                        cube.GetComponent<SpringJoint>().spring = alive ? 10 : 0;
+                        cube.GetComponent<Renderer>().material.color = alive ? livingColor : deadColor;
+                    }
+                    */
+
                 }
             }
         }
