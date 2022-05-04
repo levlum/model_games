@@ -31,7 +31,7 @@ public class collisions : MonoBehaviour
                 cube.GetComponent<Renderer>().material.color = Color.green;
                 StartCoroutine(Happy(cube));
                 }
-                
+                //nothing
             }
 
             if (this.tag == "Danger"){
