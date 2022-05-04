@@ -30,8 +30,11 @@ public class collisions : MonoBehaviour
                 cube.GetComponent<SpringJoint>().spring = 10;
                 cube.GetComponent<Renderer>().material.color = Color.green;
                 StartCoroutine(Happy(cube));
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                cube.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                cube.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 }
-                //nothing
             }
 
             if (this.tag == "Danger"){
@@ -43,6 +46,10 @@ public class collisions : MonoBehaviour
                 cube.GetComponent<SpringJoint>().spring = 0;
                 cube.GetComponent<Renderer>().material.color = alive ? deadColor : Color.red;
                 StartCoroutine(Danger(cube));
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                cube.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                cube.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 } 
 
             }

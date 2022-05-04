@@ -2221,6 +2221,7 @@ GameObject:
   - component: {fileID: 1275560775}
   - component: {fileID: 1275560776}
   - component: {fileID: 1275560777}
+  - component: {fileID: 1275560778}
   m_Layer: 0
   m_Name: Danger
   m_TagString: Danger
@@ -2345,6 +2346,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a1de4eb250b4c469adde7aea7e4373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1275560778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275560770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd558d10bd1c5cc4982eb96d8c937aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alien: {fileID: 1325679170}
 --- !u!1 &1325679169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2372,7 @@ GameObject:
   - component: {fileID: 1325679172}
   - component: {fileID: 1325679171}
   - component: {fileID: 1325679170}
+  - component: {fileID: 1325679175}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Player
@@ -2457,6 +2472,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325679175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325679169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bd9982868f9c74d9828a194fd0847e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388384340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3286,7 @@ GameObject:
   - component: {fileID: 2074235385}
   - component: {fileID: 2074235384}
   - component: {fileID: 2074235386}
+  - component: {fileID: 2074235387}
   m_Layer: 0
   m_Name: Happy
   m_TagString: Happy
@@ -3383,6 +3411,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alive: 0
+--- !u!114 &2074235387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074235379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca13d5cdfcbe0642bd8333c9f71af93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alien: {fileID: 1325679170}
 --- !u!1 &2090701440
 GameObject:
   m_ObjectHideFlags: 0
