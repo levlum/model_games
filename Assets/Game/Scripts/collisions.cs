@@ -30,14 +30,16 @@ public class collisions : MonoBehaviour
                 cube.GetComponent<SpringJoint>().spring = 10;
                 cube.GetComponent<Renderer>().material.color = Color.green;
                 StartCoroutine(Happy(cube));
+                
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 cube.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 cube.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                
                 }
             }
 
-            if (this.tag == "Danger"){
+            if (this.tag == "Danger" && collision.gameObject.tag != "Danger"){
                 
                 alive = false;
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<mouseinteraction>().alive = false;
@@ -54,7 +56,10 @@ public class collisions : MonoBehaviour
 
             }
 
-            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if(collision.gameObject.tag != this.gameObject.tag){
+                this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            }
+            
 
         }
         }
