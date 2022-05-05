@@ -10,7 +10,7 @@ public class repel : MonoBehaviour
     void Update()
     {
         Vector3 delta = this.transform.position - alien.transform.position;
-        Vector3 force = delta.normalized * 10/delta.magnitude;
+        Vector3 force = delta.normalized * 2000/delta.magnitude;
 
         /*
         if (delta.magnitude > 40 && alien.velocity.magnitude > 0){
@@ -21,8 +21,8 @@ public class repel : MonoBehaviour
             alien.AddForce(-force, ForceMode.Force);
         }
         */
-        if(delta.magnitude > 10){
-            alien.AddForce(-delta, ForceMode.Force);
+        if(delta.magnitude > 10 && GameObject.FindGameObjectWithTag("MainCamera").GetComponent<mouseinteraction>().alive){
+            alien.AddForce(-force, ForceMode.Force);
         }
         
     }

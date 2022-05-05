@@ -12,6 +12,9 @@ public class randomMovement : MonoBehaviour
     void Update()
     {
          myVector = new Vector3(UnityEngine.Random.Range(min, max), UnityEngine.Random.Range(min, 20), UnityEngine.Random.Range(min, max));
-        this.gameObject.GetComponent<Rigidbody>().AddForce(myVector, ForceMode.Force);
+         if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<mouseinteraction>().alive){
+             this.gameObject.GetComponent<Rigidbody>().AddForce(myVector, ForceMode.Force);
+         }
+        
     }
 }

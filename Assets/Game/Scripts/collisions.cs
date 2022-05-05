@@ -20,8 +20,8 @@ public class collisions : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
         
-        if (collision.gameObject.tag != "Floor"){
-
+        if (collision.gameObject.tag == "Player"){
+            if(collision.gameObject.tag != "Extra"){
             if (this.tag == "Happy"){
                 alive = true;
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<mouseinteraction>().alive = true;
@@ -54,12 +54,9 @@ public class collisions : MonoBehaviour
 
             }
 
-            if (this.tag == "Extra"){
-
-            }
-
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
+        }
         }
 
     }
