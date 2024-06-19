@@ -6,6 +6,11 @@ TagManager:
   tags:
   - jumpy
   - away
+  - Entity1
+  - Cylinder
+  - Floor
+  - Collectible
+  - Cell
   layers:
   - Default
   - TransparentFX
